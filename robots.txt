@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pocaevpoca74-cmyk.github.io/aisnet/sitemap.xml
