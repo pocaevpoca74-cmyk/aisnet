@@ -4,20 +4,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AISNET – Компьютерлер</title>
+<meta name="description" content="AISNET — компьютердин түзүлүшү, түрлөрү жана тандоо боюнча жөнөкөй маалымат. Кыргызча жана орусча.">
+<link rel="canonical" href="https://pocaevpoca74-cmyk.github.io/aisnet/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AISNET – Компьютерлер">
+<meta property="og:description" content="Компьютердин түзүлүшү, түрлөрү жана тандоо боюнча жөнөкөй маалымат.">
+<meta property="og:url" content="https://pocaevpoca74-cmyk.github.io/aisnet/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"AISNET","url":"https://pocaevpoca74-cmyk.github.io/aisnet/","author":{"@type":"Person","name":"Aslidin Jamaldinov"},"inLanguage":["ky","ru"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#14213d;--paper:#eef1f6;--card:#ffffff;--signal:#2f5bff;--mint:#12a37f;--line:#c9d1e0;--muted:#51607f;--onsignal:#fff;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--ink:#14213d;--paper:#eef1f6;--card:#fff;--signal:#2f5bff;--mint:#12a37f;--line:#c9d1e0;--muted:#51607f;--onsignal:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e8edf8;--paper:#0e1526;--card:#16203a;--signal:#7d9bff;--mint:#3fd6b0;--line:#2a3657;--muted:#9aa8c8;--onsignal:#0e1526}}
 :root[data-theme="dark"]{--ink:#e8edf8;--paper:#0e1526;--card:#16203a;--signal:#7d9bff;--mint:#3fd6b0;--line:#2a3657;--muted:#9aa8c8;--onsignal:#0e1526}
 *{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:1.05rem}
 a{color:var(--signal)}
-a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
 .wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+header.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:.9rem 0;gap:1rem}
 nav b{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
 .links{display:flex;align-items:center;gap:1.25rem}
 .links a{color:var(--ink);text-decoration:none;font-weight:600}
@@ -25,17 +32,18 @@ nav b{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
 .lang{display:flex;border:2px solid var(--line);border-radius:.6rem;overflow:hidden}
 .lang button{font:inherit;font-weight:600;border:0;background:transparent;color:var(--ink);padding:.3rem .8rem;cursor:pointer}
 .lang button[aria-pressed="true"]{background:var(--signal);color:var(--onsignal)}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3.5rem 0 4.5rem}
 h1{font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1.02;margin:0 0 1.25rem;font-weight:800;letter-spacing:-.04em}
 .hero p{max-width:34rem;color:var(--muted);font-size:1.2rem;margin:0 0 1.75rem}
-.btn{display:inline-block;background:var(--signal);color:var(--onsignal);padding:.8rem 1.4rem;border-radius:.6rem;font-weight:600;text-decoration:none}
+.btn{display:inline-block;background:var(--signal);color:var(--onsignal);padding:.8rem 1.4rem;border-radius:.6rem;font-weight:600;text-decoration:none;margin:0 .6rem .6rem 0}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
 svg.net{width:100%;height:auto}
 .net line{stroke:var(--line);stroke-width:2;stroke-dasharray:140;stroke-dashoffset:140;animation:draw 1.6s ease-out forwards}
 .net circle{fill:var(--card);stroke:var(--signal);stroke-width:3}
 .net circle.hub{fill:var(--signal)}
 .net circle.alt{stroke:var(--mint)}
 @keyframes draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.net line{animation:none;stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.net line{animation:none;stroke-dashoffset:0}html{scroll-behavior:auto}}
 section{padding:3.5rem 0;border-top:1px solid var(--line)}
 h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.03em;margin:0 0 1rem;line-height:1.1}
 .lead{max-width:42rem;color:var(--muted)}
@@ -44,117 +52,133 @@ h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.03em;margin:0 0 1rem;line
 .item:nth-child(even){border-color:var(--mint)}
 .item h3{margin:0 0 .35rem;font-size:1.2rem}
 .item p{margin:0;color:var(--muted)}
-.types .item{background:var(--card);border:0;border-radius:1rem;padding:1.5rem}
-footer{padding:2rem 0 3rem;color:var(--muted);border-top:1px solid var(--line);font-size:.95rem}
+.card .item{background:var(--card);border:0;border-radius:1rem;padding:1.5rem}
+.steps{counter-reset:s;list-style:none;padding:0;margin:2rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1.5rem}
+.steps li{counter-increment:s;background:var(--card);border-radius:1rem;padding:1.5rem;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--signal);color:var(--onsignal);font-weight:800;margin-bottom:.8rem}
+.steps h3{margin:0 0 .3rem;font-size:1.2rem}
+.steps p{margin:0;color:var(--muted)}
+.tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0 1rem}
+.tabs button{font:inherit;font-weight:600;border:2px solid var(--line);background:transparent;color:var(--ink);border-radius:.6rem;padding:.5rem 1rem;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--signal);border-color:var(--signal);color:var(--onsignal)}
+.spec{background:var(--card);border-radius:1rem;padding:1.5rem;max-width:42rem}
+.spec div{display:flex;gap:1rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.spec div:last-of-type{border:0}
+.spec dt{min-width:7rem;color:var(--muted);font-weight:600}
+.spec dd{margin:0;font-weight:600}
+.note{color:var(--muted);font-size:.95rem;margin:.8rem 0 0}
+details{background:var(--card);border-radius:.8rem;padding:1rem 1.25rem;margin-top:.8rem;max-width:46rem}
+summary{cursor:pointer;font-weight:600;font-size:1.1rem}
+details p{margin:.7rem 0 0;color:var(--muted)}
+footer{padding:2rem 0 3rem;color:var(--muted);border-top:1px solid var(--line);font-size:.95rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 footer b{color:var(--ink)}
-@media (max-width:48rem){.hero{grid-template-columns:1fr}.links a{display:none}}
+@media (max-width:48rem){.hero{grid-template-columns:1fr}.links a{display:none}.spec div{flex-direction:column;gap:.1rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<nav>
+<header class="bar"><div class="wrap"><nav>
 <b>AISNET</b>
 <div class="links">
-<a href="#about" data-i="nav1"></a><a href="#parts" data-i="nav2"></a><a href="#types" data-i="nav3"></a>
-<div class="lang" role="group" aria-label="Тил / Язык">
-<button type="button" data-lang="ky" aria-pressed="true">KY</button>
-<button type="button" data-lang="ru" aria-pressed="false">RU</button>
+<a href="#how" data-i="n1"></a><a href="#parts" data-i="n2"></a><a href="#choose" data-i="n3"></a><a href="#faq" data-i="n4"></a>
+<div class="lang" role="group" aria-label="Тил / Язык"><button type="button" data-lang="ky" aria-pressed="true">KY</button><button type="button" data-lang="ru" aria-pressed="false">RU</button></div>
 </div>
-</div>
-</nav>
+</nav></div></header>
 
-<header class="hero">
+<main class="wrap">
+<div class="hero">
 <div>
 <h1 data-i="h1"></h1>
 <p data-i="hp"></p>
-<a class="btn" href="#about" data-i="btn"></a>
+<a class="btn" href="#about" data-i="b1"></a><a class="btn alt" href="#choose" data-i="b2"></a>
 </div>
 <svg class="net" viewBox="0 0 400 360" role="img" aria-hidden="true">
-<g>
-<line x1="200" y1="180" x2="70" y2="70"/><line x1="200" y1="180" x2="330" y2="60"/>
-<line x1="200" y1="180" x2="60" y2="270"/><line x1="200" y1="180" x2="340" y2="290"/>
-<line x1="200" y1="180" x2="200" y2="30"/><line x1="70" y1="70" x2="200" y2="30"/>
-<line x1="330" y1="60" x2="200" y2="30"/><line x1="60" y1="270" x2="70" y2="70"/>
-<line x1="340" y1="290" x2="330" y2="60"/><line x1="60" y1="270" x2="200" y2="335"/>
-<line x1="340" y1="290" x2="200" y2="335"/><line x1="200" y1="180" x2="200" y2="335"/>
-</g>
-<circle class="hub" cx="200" cy="180" r="22"/>
-<circle cx="70" cy="70" r="13"/><circle class="alt" cx="330" cy="60" r="13"/>
-<circle class="alt" cx="60" cy="270" r="13"/><circle cx="340" cy="290" r="13"/>
-<circle cx="200" cy="30" r="10"/><circle class="alt" cx="200" cy="335" r="10"/>
+<g><line x1="200" y1="180" x2="70" y2="70"/><line x1="200" y1="180" x2="330" y2="60"/><line x1="200" y1="180" x2="60" y2="270"/><line x1="200" y1="180" x2="340" y2="290"/><line x1="200" y1="180" x2="200" y2="30"/><line x1="70" y1="70" x2="200" y2="30"/><line x1="330" y1="60" x2="200" y2="30"/><line x1="60" y1="270" x2="70" y2="70"/><line x1="340" y1="290" x2="330" y2="60"/><line x1="60" y1="270" x2="200" y2="335"/><line x1="340" y1="290" x2="200" y2="335"/><line x1="200" y1="180" x2="200" y2="335"/></g>
+<circle class="hub" cx="200" cy="180" r="22"/><circle cx="70" cy="70" r="13"/><circle class="alt" cx="330" cy="60" r="13"/><circle class="alt" cx="60" cy="270" r="13"/><circle cx="340" cy="290" r="13"/><circle cx="200" cy="30" r="10"/><circle class="alt" cx="200" cy="335" r="10"/>
 </svg>
-</header>
-
-<section id="about">
-<h2 data-i="a_h"></h2>
-<p class="lead" data-i="a_p"></p>
-</section>
-
-<section id="parts">
-<h2 data-i="p_h"></h2>
-<div class="grid">
-<div class="item"><h3 data-i="p1t"></h3><p data-i="p1d"></p></div>
-<div class="item"><h3 data-i="p2t"></h3><p data-i="p2d"></p></div>
-<div class="item"><h3 data-i="p3t"></h3><p data-i="p3d"></p></div>
-<div class="item"><h3 data-i="p4t"></h3><p data-i="p4d"></p></div>
 </div>
-</section>
 
-<section id="types" class="types">
-<h2 data-i="t_h"></h2>
-<div class="grid">
-<div class="item"><h3 data-i="t1t"></h3><p data-i="t1d"></p></div>
-<div class="item"><h3 data-i="t2t"></h3><p data-i="t2d"></p></div>
-<div class="item"><h3 data-i="t3t"></h3><p data-i="t3d"></p></div>
-</div>
-</section>
+<section id="about"><h2 data-i="a_h"></h2><p class="lead" data-i="a_p"></p></section>
+<section id="how"><h2 data-i="w_h"></h2><ol class="steps" id="steps"></ol></section>
+<section id="parts"><h2 data-i="p_h"></h2><div class="grid" id="parts-list"></div></section>
+<section id="types" class="card"><h2 data-i="t_h"></h2><div class="grid" id="types-list"></div></section>
+<section id="os" class="card"><h2 data-i="o_h"></h2><div class="grid" id="os-list"></div></section>
+<section id="choose"><h2 data-i="c_h"></h2><p class="lead" data-i="c_p"></p>
+<div class="tabs" role="tablist" id="tabs"></div>
+<dl class="spec" id="spec"></dl><p class="note" data-i="c_n"></p></section>
+<section id="faq"><h2 data-i="f_h"></h2><div id="faq-list"></div></section>
+</main>
 
-<footer>
-<div>© 2026 AISNET</div>
-<div><span data-i="by"></span> <b data-i="maker"></b></div>
-</footer>
-</div>
+<div class="wrap"><footer>
+<div><div>© 2026 AISNET</div><div><span data-i="by"></span> <b data-i="maker"></b></div></div>
+<a href="#top" data-i="top" onclick="window.scrollTo(0,0);return false"></a>
+</footer></div>
 
 <script>
 var T={
-ky:{nav1:"Биз жөнүндө",nav2:"Бөлүктөрү",nav3:"Түрлөрү",
+ky:{n1:"Кантип иштейт",n2:"Бөлүктөрү",n3:"Тандоо",n4:"Суроолор",
 h1:"Компьютерлер дүйнөсү бир жерде.",
 hp:"AISNET — компьютерлердин түзүлүшү, тандоо жана колдонуу жөнүндө жөнөкөй жана түшүнүктүү айтып берген сайт.",
-btn:"Көбүрөөк билүү",
+b1:"Көбүрөөк билүү",b2:"Компьютер тандоо",
 a_h:"Компьютер деген эмне?",
 a_p:"Компьютер — маалыматты кабыл алып, иштетип, жыйынтыгын көрсөткөн электрондук түзмөк. Ал иштеши үчүн аппараттык бөлүк (темир) жана программалык камсыздоо керек.",
+w_h:"Компьютер кантип иштейт",
+steps:[["Киргизүү","Клавиатура, чычкан же микрофон аркылуу буйрук жана маалымат берилет."],["Иштетүү","Процессор буйруктарды аткарып, эсептөөлөрдү жүргүзөт."],["Сактоо","Маалымат убактылуу RAM’да, туруктуу SSD же HDD’де сакталат."],["Чыгаруу","Жыйынтык экранга, динамикке же принтерге чыгат."]],
 p_h:"Компьютер эмнеден турат",
-p1t:"Процессор",p1d:"Компьютердин мээси. Бардык эсептөөлөрдү аткарат.",
-p2t:"Оперативдүү эс (RAM)",p2d:"Иштеп жаткан программалардын маалыматын убактылуу сактайт.",
-p3t:"Сактагыч (SSD/HDD)",p3d:"Файлдарды, программаларды жана системаны туруктуу сактайт.",
-p4t:"Видеокарта",p4d:"Сүрөттү, видеону жана оюндарды экранга чыгарат.",
+parts:[["Процессор","Компьютердин мээси. Бардык эсептөөлөрдү аткарат."],["Оперативдүү эс (RAM)","Иштеп жаткан программалардын маалыматын убактылуу сактайт."],["Сактагыч (SSD/HDD)","Файлдарды, программаларды жана системаны туруктуу сактайт."],["Видеокарта","Сүрөттү, видеону жана оюндарды экранга чыгарат."],["Эне плата","Бардык бөлүктөрдү бири-бирине туташтырат."],["Кубат блогу","Бөлүктөргө керектүү электр энергиясын берет."]],
 t_h:"Компьютердин түрлөрү",
-t1t:"Үстөлдүк компьютер",t1d:"Кубаттуу, оңой жаңыртылат, үйгө жана кеңсеге ылайыктуу.",
-t2t:"Ноутбук",t2d:"Чакан, ташууга ыңгайлуу, аккумулятордон иштейт.",
-t3t:"Сервер",t3d:"Сайттарды жана тармактарды тынымсыз тейлейт, маалыматты сактайт.",
-by:"Сайтты түзгөн:",maker:"Аслидин Жамалдинов",title:"AISNET – Компьютерлер"},
-ru:{nav1:"О сайте",nav2:"Компоненты",nav3:"Виды",
+types:[["Үстөлдүк компьютер","Кубаттуу, оңой жаңыртылат, үйгө жана кеңсеге ылайыктуу."],["Ноутбук","Чакан, ташууга ыңгайлуу, аккумулятордон иштейт."],["Моноблок","Системалык блок менен экран бир корпуста."],["Сервер","Сайттарды жана тармактарды тынымсыз тейлейт, маалыматты сактайт."]],
+o_h:"Операциялык системалар",
+os:[["Windows","Дүйнөдө эң кеңири таралган. Көп программа жана оюндар менен шайкеш."],["macOS","Apple компьютерлеринде иштейт. Дизайн жана видео үчүн жагымдуу."],["Linux","Акысыз жана ачык. Программисттер менен серверлерде көп колдонулат."]],
+c_h:"Максатыңа жараша тандоо",
+c_p:"Компьютерди эмне үчүн колдонорун тандаңыз, сунуш кылынган мүнөздөмөнү көрөсүз.",
+lab:["RAM","Сактагыч","Видеокарта"],
+use:[["Окуу жана кеңсе","8 ГБ","256 ГБ SSD","Кыналган видеокарта жетиштүү"],["Оюндар","16–32 ГБ","1 ТБ SSD","Өзүнчө кубаттуу видеокарта"],["Дизайн жана видео","32 ГБ","1 ТБ жана андан көп SSD","Кубаттуу видеокарта жана так түстүү экран"]],
+c_n:"Булар болжолдуу сунуштар. Баасына жана моделине жараша өзгөрөт.",
+f_h:"Көп берилүүчү суроолор",
+faq:[["Канча RAM керек?","Күнүмдүк иш үчүн 8 ГБ жетет. Оюндар жана монтаж үчүн 16 ГБ жана андан көп алыңыз."],["SSD менен HDD айырмасы эмнеде?","SSD бир нече эсе ылдам жана ызы-чуусуз. HDD арзаныраак, бирок жайыраак. Системаны SSD’ге орнотуу сунушталат."],["Компьютер эмне үчүн жайлап калат?","Көбүнчө эс аз, сактагыч толуп калган же фондо көп программа иштеп жатат. Керексиз программаларды өчүрүп, тазалап көрүңүз."]],
+by:"Сайтты түзгөн:",maker:"Аслидин Жамалдинов",top:"Өйдө",title:"AISNET – Компьютерлер"},
+ru:{n1:"Как работает",n2:"Компоненты",n3:"Выбор",n4:"Вопросы",
 h1:"Мир компьютеров в одном месте.",
 hp:"AISNET — сайт, где просто и понятно рассказано, как устроены компьютеры, как их выбирать и использовать.",
-btn:"Узнать больше",
+b1:"Узнать больше",b2:"Выбрать компьютер",
 a_h:"Что такое компьютер?",
 a_p:"Компьютер — электронное устройство, которое принимает данные, обрабатывает их и показывает результат. Для работы ему нужны аппаратная часть («железо») и программное обеспечение.",
+w_h:"Как работает компьютер",
+steps:[["Ввод","Команды и данные поступают через клавиатуру, мышь или микрофон."],["Обработка","Процессор выполняет команды и проводит вычисления."],["Хранение","Данные временно лежат в RAM, а постоянно — на SSD или HDD."],["Вывод","Результат появляется на экране, в динамиках или на принтере."]],
 p_h:"Из чего состоит компьютер",
-p1t:"Процессор",p1d:"Мозг компьютера. Выполняет все вычисления.",
-p2t:"Оперативная память (RAM)",p2d:"Временно хранит данные запущенных программ.",
-p3t:"Накопитель (SSD/HDD)",p3d:"Постоянно хранит файлы, программы и систему.",
-p4t:"Видеокарта",p4d:"Выводит на экран изображение, видео и игры.",
+parts:[["Процессор","Мозг компьютера. Выполняет все вычисления."],["Оперативная память (RAM)","Временно хранит данные запущенных программ."],["Накопитель (SSD/HDD)","Постоянно хранит файлы, программы и систему."],["Видеокарта","Выводит на экран изображение, видео и игры."],["Материнская плата","Соединяет все компоненты между собой."],["Блок питания","Подаёт электроэнергию всем компонентам."]],
 t_h:"Виды компьютеров",
-t1t:"Настольный компьютер",t1d:"Мощный и легко обновляемый, подходит для дома и офиса.",
-t2t:"Ноутбук",t2d:"Компактный и переносной, работает от аккумулятора.",
-t3t:"Сервер",t3d:"Круглосуточно обслуживает сайты и сети, хранит данные.",
-by:"Автор сайта:",maker:"Аслидин Джамалдинов",title:"AISNET – Компьютеры"}
+types:[["Настольный компьютер","Мощный и легко обновляемый, подходит для дома и офиса."],["Ноутбук","Компактный и переносной, работает от аккумулятора."],["Моноблок","Системный блок и экран в одном корпусе."],["Сервер","Круглосуточно обслуживает сайты и сети, хранит данные."]],
+o_h:"Операционные системы",
+os:[["Windows","Самая распространённая система. Подходит для большинства программ и игр."],["macOS","Работает на компьютерах Apple. Популярна у дизайнеров и видеомонтажёров."],["Linux","Бесплатная и открытая. Часто используется программистами и на серверах."]],
+c_h:"Выбор под вашу задачу",
+c_p:"Выберите, для чего нужен компьютер, и увидите рекомендуемые характеристики.",
+lab:["RAM","Накопитель","Видеокарта"],
+use:[["Учёба и офис","8 ГБ","256 ГБ SSD","Достаточно встроенной графики"],["Игры","16–32 ГБ","1 ТБ SSD","Отдельная мощная видеокарта"],["Дизайн и видео","32 ГБ","1 ТБ и больше SSD","Мощная видеокарта и экран с точной цветопередачей"]],
+c_n:"Это ориентировочные рекомендации. Зависят от цены и модели.",
+f_h:"Частые вопросы",
+faq:[["Сколько нужно RAM?","Для повседневных задач хватит 8 ГБ. Для игр и монтажа берите 16 ГБ и больше."],["Чем SSD отличается от HDD?","SSD в разы быстрее и работает бесшумно. HDD дешевле, но медленнее. Систему лучше ставить на SSD."],["Почему компьютер тормозит?","Чаще всего мало памяти, забит накопитель или в фоне работает много программ. Удалите лишнее и очистите диск."]],
+by:"Автор сайта:",maker:"Аслидин Джамалдинов",top:"Наверх",title:"AISNET – Компьютеры"}
 };
+var cur="ky",tab=0;
+function $(i){return document.getElementById(i)}
+function cards(a){return a.map(function(x){return '<div class="item"><h3>'+x[0]+'</h3><p>'+x[1]+'</p></div>'}).join("")}
+function spec(){
+var d=T[cur],u=d.use[tab];
+$("spec").innerHTML=[1,2,3].map(function(k,i){return '<div><dt>'+d.lab[i]+'</dt><dd>'+u[k]+'</dd></div>'}).join("");
+document.querySelectorAll("#tabs button").forEach(function(b,i){b.setAttribute("aria-selected",i===tab)});
+}
 function setLang(l){
-var d=T[l];if(!d)return;
+var d=T[l];if(!d)return;cur=l;
 document.documentElement.lang=l;document.title=d.title;
 document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=d[e.getAttribute("data-i")]});
 document.querySelectorAll("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l)});
+$("steps").innerHTML=d.steps.map(function(x){return '<li><h3>'+x[0]+'</h3><p>'+x[1]+'</p></li>'}).join("");
+$("parts-list").innerHTML=cards(d.parts);$("types-list").innerHTML=cards(d.types);$("os-list").innerHTML=cards(d.os);
+$("faq-list").innerHTML=d.faq.map(function(x){return '<details><summary>'+x[0]+'</summary><p>'+x[1]+'</p></details>'}).join("");
+$("tabs").innerHTML=d.use.map(function(x,i){return '<button type="button" role="tab" data-t="'+i+'">'+x[0]+'</button>'}).join("");
+document.querySelectorAll("#tabs button").forEach(function(b){b.addEventListener("click",function(){tab=+b.getAttribute("data-t");spec()})});
+spec();
 try{localStorage.setItem("aisnet-lang",l)}catch(e){}
 }
 document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});
