@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AISNET – Компьютерлер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--paper:#eef1f6;--card:#ffffff;--signal:#2f5bff;--mint:#12a37f;--line:#c9d1e0;--muted:#51607f;--onsignal:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#e8edf8;--paper:#0e1526;--card:#16203a;--signal:#7d9bff;--mint:#3fd6b0;--line:#2a3657;--muted:#9aa8c8;--onsignal:#0e1526}}
+:root[data-theme="dark"]{--ink:#e8edf8;--paper:#0e1526;--card:#16203a;--signal:#7d9bff;--mint:#3fd6b0;--line:#2a3657;--muted:#9aa8c8;--onsignal:#0e1526}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;font-size:1.05rem}
+a{color:var(--signal)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.25rem}
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
+nav b{font-size:1.3rem;font-weight:800;letter-spacing:-.02em}
+.links{display:flex;align-items:center;gap:1.25rem}
+.links a{color:var(--ink);text-decoration:none;font-weight:600}
+.links a:hover{color:var(--signal)}
+.lang{display:flex;border:2px solid var(--line);border-radius:.6rem;overflow:hidden}
+.lang button{font:inherit;font-weight:600;border:0;background:transparent;color:var(--ink);padding:.3rem .8rem;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--signal);color:var(--onsignal)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:3rem 0 4rem}
+h1{font-size:clamp(2.4rem,6.5vw,4.6rem);line-height:1.02;margin:0 0 1.25rem;font-weight:800;letter-spacing:-.04em}
+.hero p{max-width:34rem;color:var(--muted);font-size:1.2rem;margin:0 0 1.75rem}
+.btn{display:inline-block;background:var(--signal);color:var(--onsignal);padding:.8rem 1.4rem;border-radius:.6rem;font-weight:600;text-decoration:none}
+svg.net{width:100%;height:auto}
+.net line{stroke:var(--line);stroke-width:2;stroke-dasharray:140;stroke-dashoffset:140;animation:draw 1.6s ease-out forwards}
+.net circle{fill:var(--card);stroke:var(--signal);stroke-width:3}
+.net circle.hub{fill:var(--signal)}
+.net circle.alt{stroke:var(--mint)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.net line{animation:none;stroke-dashoffset:0}}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.03em;margin:0 0 1rem;line-height:1.1}
+.lead{max-width:42rem;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));gap:1.5rem;margin-top:2rem}
+.item{border-left:4px solid var(--signal);padding-left:1rem}
+.item:nth-child(even){border-color:var(--mint)}
+.item h3{margin:0 0 .35rem;font-size:1.2rem}
+.item p{margin:0;color:var(--muted)}
+.types .item{background:var(--card);border:0;border-radius:1rem;padding:1.5rem}
+footer{padding:2rem 0 3rem;color:var(--muted);border-top:1px solid var(--line);font-size:.95rem}
+footer b{color:var(--ink)}
+@media (max-width:48rem){.hero{grid-template-columns:1fr}.links a{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<b>AISNET</b>
+<div class="links">
+<a href="#about" data-i="nav1"></a><a href="#parts" data-i="nav2"></a><a href="#types" data-i="nav3"></a>
+<div class="lang" role="group" aria-label="Тил / Язык">
+<button type="button" data-lang="ky" aria-pressed="true">KY</button>
+<button type="button" data-lang="ru" aria-pressed="false">RU</button>
+</div>
+</div>
+</nav>
+
+<header class="hero">
+<div>
+<h1 data-i="h1"></h1>
+<p data-i="hp"></p>
+<a class="btn" href="#about" data-i="btn"></a>
+</div>
+<svg class="net" viewBox="0 0 400 360" role="img" aria-hidden="true">
+<g>
+<line x1="200" y1="180" x2="70" y2="70"/><line x1="200" y1="180" x2="330" y2="60"/>
+<line x1="200" y1="180" x2="60" y2="270"/><line x1="200" y1="180" x2="340" y2="290"/>
+<line x1="200" y1="180" x2="200" y2="30"/><line x1="70" y1="70" x2="200" y2="30"/>
+<line x1="330" y1="60" x2="200" y2="30"/><line x1="60" y1="270" x2="70" y2="70"/>
+<line x1="340" y1="290" x2="330" y2="60"/><line x1="60" y1="270" x2="200" y2="335"/>
+<line x1="340" y1="290" x2="200" y2="335"/><line x1="200" y1="180" x2="200" y2="335"/>
+</g>
+<circle class="hub" cx="200" cy="180" r="22"/>
+<circle cx="70" cy="70" r="13"/><circle class="alt" cx="330" cy="60" r="13"/>
+<circle class="alt" cx="60" cy="270" r="13"/><circle cx="340" cy="290" r="13"/>
+<circle cx="200" cy="30" r="10"/><circle class="alt" cx="200" cy="335" r="10"/>
+</svg>
+</header>
+
+<section id="about">
+<h2 data-i="a_h"></h2>
+<p class="lead" data-i="a_p"></p>
+</section>
+
+<section id="parts">
+<h2 data-i="p_h"></h2>
+<div class="grid">
+<div class="item"><h3 data-i="p1t"></h3><p data-i="p1d"></p></div>
+<div class="item"><h3 data-i="p2t"></h3><p data-i="p2d"></p></div>
+<div class="item"><h3 data-i="p3t"></h3><p data-i="p3d"></p></div>
+<div class="item"><h3 data-i="p4t"></h3><p data-i="p4d"></p></div>
+</div>
+</section>
+
+<section id="types" class="types">
+<h2 data-i="t_h"></h2>
+<div class="grid">
+<div class="item"><h3 data-i="t1t"></h3><p data-i="t1d"></p></div>
+<div class="item"><h3 data-i="t2t"></h3><p data-i="t2d"></p></div>
+<div class="item"><h3 data-i="t3t"></h3><p data-i="t3d"></p></div>
+</div>
+</section>
+
+<footer>
+<div>© 2026 AISNET</div>
+<div><span data-i="by"></span> <b data-i="maker"></b></div>
+</footer>
+</div>
+
+<script>
+var T={
+ky:{nav1:"Биз жөнүндө",nav2:"Бөлүктөрү",nav3:"Түрлөрү",
+h1:"Компьютерлер дүйнөсү бир жерде.",
+hp:"AISNET — компьютерлердин түзүлүшү, тандоо жана колдонуу жөнүндө жөнөкөй жана түшүнүктүү айтып берген сайт.",
+btn:"Көбүрөөк билүү",
+a_h:"Компьютер деген эмне?",
+a_p:"Компьютер — маалыматты кабыл алып, иштетип, жыйынтыгын көрсөткөн электрондук түзмөк. Ал иштеши үчүн аппараттык бөлүк (темир) жана программалык камсыздоо керек.",
+p_h:"Компьютер эмнеден турат",
+p1t:"Процессор",p1d:"Компьютердин мээси. Бардык эсептөөлөрдү аткарат.",
+p2t:"Оперативдүү эс (RAM)",p2d:"Иштеп жаткан программалардын маалыматын убактылуу сактайт.",
+p3t:"Сактагыч (SSD/HDD)",p3d:"Файлдарды, программаларды жана системаны туруктуу сактайт.",
+p4t:"Видеокарта",p4d:"Сүрөттү, видеону жана оюндарды экранга чыгарат.",
+t_h:"Компьютердин түрлөрү",
+t1t:"Үстөлдүк компьютер",t1d:"Кубаттуу, оңой жаңыртылат, үйгө жана кеңсеге ылайыктуу.",
+t2t:"Ноутбук",t2d:"Чакан, ташууга ыңгайлуу, аккумулятордон иштейт.",
+t3t:"Сервер",t3d:"Сайттарды жана тармактарды тынымсыз тейлейт, маалыматты сактайт.",
+by:"Сайтты түзгөн:",maker:"Аслидин Жамалдинов",title:"AISNET – Компьютерлер"},
+ru:{nav1:"О сайте",nav2:"Компоненты",nav3:"Виды",
+h1:"Мир компьютеров в одном месте.",
+hp:"AISNET — сайт, где просто и понятно рассказано, как устроены компьютеры, как их выбирать и использовать.",
+btn:"Узнать больше",
+a_h:"Что такое компьютер?",
+a_p:"Компьютер — электронное устройство, которое принимает данные, обрабатывает их и показывает результат. Для работы ему нужны аппаратная часть («железо») и программное обеспечение.",
+p_h:"Из чего состоит компьютер",
+p1t:"Процессор",p1d:"Мозг компьютера. Выполняет все вычисления.",
+p2t:"Оперативная память (RAM)",p2d:"Временно хранит данные запущенных программ.",
+p3t:"Накопитель (SSD/HDD)",p3d:"Постоянно хранит файлы, программы и систему.",
+p4t:"Видеокарта",p4d:"Выводит на экран изображение, видео и игры.",
+t_h:"Виды компьютеров",
+t1t:"Настольный компьютер",t1d:"Мощный и легко обновляемый, подходит для дома и офиса.",
+t2t:"Ноутбук",t2d:"Компактный и переносной, работает от аккумулятора.",
+t3t:"Сервер",t3d:"Круглосуточно обслуживает сайты и сети, хранит данные.",
+by:"Автор сайта:",maker:"Аслидин Джамалдинов",title:"AISNET – Компьютеры"}
+};
+function setLang(l){
+var d=T[l];if(!d)return;
+document.documentElement.lang=l;document.title=d.title;
+document.querySelectorAll("[data-i]").forEach(function(e){e.textContent=d[e.getAttribute("data-i")]});
+document.querySelectorAll("[data-lang]").forEach(function(b){b.setAttribute("aria-pressed",b.getAttribute("data-lang")===l)});
+try{localStorage.setItem("aisnet-lang",l)}catch(e){}
+}
+document.querySelectorAll("[data-lang]").forEach(function(b){b.addEventListener("click",function(){setLang(b.getAttribute("data-lang"))})});
+var s="ky";try{s=localStorage.getItem("aisnet-lang")||"ky"}catch(e){}
+setLang(T[s]?s:"ky");
+</script>
+</body>
+</html>
