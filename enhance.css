@@ -1,0 +1,23 @@
+/* AISNET enhance.css — mevcut renk değişkenlerini kullanır (açık/koyu tema uyumlu) */
+.hero::before{content:"";position:absolute;inset:0 -20vw auto;height:28rem;background:radial-gradient(40rem 18rem at 70% 30%,color-mix(in srgb,var(--signal) 18%,transparent),transparent 70%);pointer-events:none;z-index:-1}
+.hero{position:relative}
+svg.art{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+.btn{transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 20px color-mix(in srgb,var(--signal) 30%,transparent)}
+.btn:active{transform:scale(.97)}
+.svc,.steps li,.why div{transition:transform .25s,box-shadow .25s}
+.svc:hover,.steps li:hover,.why div:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.12)}
+.grid .svc,.steps li{opacity:0;transform:translateY(16px)}
+.grid .svc.in,.steps li.in{opacity:1;transform:none;transition:opacity .5s var(--d,0s),transform .5s var(--d,0s)}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(14rem,1fr));gap:1rem;margin-top:2rem}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:1rem;background:var(--card);transition:transform .3s}
+.gal img:hover{transform:scale(1.03)}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1.25rem;margin-top:2rem}
+.rev{background:var(--card);border-radius:1rem;padding:1.25rem;border-left:4px solid var(--mint)}
+.rev .st{color:var(--warn);letter-spacing:.1em}
+.rev p{margin:.4rem 0}
+.mapbox{margin-top:1.5rem;border-radius:1rem;overflow:hidden;border:1px solid var(--line);max-width:46rem}
+.mapbox iframe{display:block;width:100%;height:20rem;border:0}
+@media (max-width:48rem){.svc:hover,.steps li:hover,.why div:hover{transform:none;box-shadow:none}.mapbox iframe{height:16rem}}
+@media (prefers-reduced-motion:reduce){svg.art{animation:none}.grid .svc,.steps li{opacity:1;transform:none}}
